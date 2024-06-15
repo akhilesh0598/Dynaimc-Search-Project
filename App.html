@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Conditions</title>
+    <link rel="stylesheet" href="App.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1 class="header">Dynamic Search Conditions</h1>
+        <div class="input-fields">
+            <div class="fields">
+                <div class="input">
+                    <label>Field</label>
+                    <select id="field">
+                        <option value="" disabled selected>-- Select Field --</option>
+                        <option value="EmpId">EmpId</option>
+                        <option value="Empcode">Empcode</option>
+                        <option value="EmpName">EmpName</option>
+                        <option value="Department">Department</option>
+                        <option value="JoiningDate">Joining Date</option>
+                        <option value="Salary">Salary</option>
+                        <option value="Location">Location</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <label>Operator</label>
+                    <select id="operator">
+                        <option value="" disabled selected>-- Select Operator --</option>
+                        <option value=">=">>=</option>
+                        <option value=">">></option>
+                        <option value="<">
+                            <
+                        <option value="<=">
+                            <=
+                        <option value="!=">!=</option>
+                        <option value="=">=</option>
+                        <option value="contains">contains</option>
+                        <option value="startswith">Start with</option>
+                        <option value="endswith">Ends with</option>
+                        <option value="notcontains">Not Contains</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="fields">
+                <div class="input">
+                    <label>Value</label>
+                    <input type="text" id="value" placeholder="Value">
+                </div>
+                <div class="input">
+                    <label>Conjunction</label>
+                    <select id="conjunction">
+                        <option value="" disabled selected>-- Select Conjunction --</option>
+                        <option value="AND">And</option>
+                        <option value="OR">Or</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="add-button">
+            <button id="add-button">Add</button>
+        </div>
+        <div class="show-table">
+            <table id="output-table">
+                <thead>
+                    <tr>
+                        <th colspan="5" style="text-align: center;">
+                            Conditions
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Fieldname</th>
+                        <th>Operator</th>
+                        <th>Value</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div class="save-button">
+                <button id="save-button">Save</button>
+            </div>
+        </div>
+        <div class="json-output">
+            <h3 class="header">Your Json Output :</h3>
+            <div id="json-output"></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="App.js"></script>
+</body>
+
+</html>
